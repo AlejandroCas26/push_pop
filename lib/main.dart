@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MaterialApp(
-    title: 'Navigation Basics',
+    title: 'Push y Pop',
     home: FirstRoute(),
   ));
 }
@@ -14,11 +14,11 @@ class FirstRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('First Route'),
+        title: const Text('Primer Enlace'),
       ),
       body: Center(
         child: ElevatedButton(
-          child: const Text('Open route'),
+          child: const Text('Abrir enlace'),
           onPressed: () {
             Navigator.push(
               context,
@@ -38,14 +38,14 @@ class SecondRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Second Route'),
+        title: const Text('Segundo Enlace'),
       ),
       body: Center(
         child: ElevatedButton(
           onPressed: () {
             Navigator.pop(context);
           },
-          child: const Text('Go back!'),
+          child: const Text('Regresar!'),
         ),
       ),
     );
